@@ -1,0 +1,33 @@
+{
+  "name": "projetonodejs",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "firebase": "^12.0.0",
+    "firebase-admin": "^13.4.0",
+    "helmet": "^8.1.0",
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "firebase": "^10.7.0",
+    "jest": "^30.0.5",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
+}

@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Arquivo de banco de dados
+database.db
+
+# Arquivos de ambiente
+.env
+
+# Logs
+logs/
+*.log
+
+# Diretórios de build
+dist/
+build/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+/serviceAccountKey.json
+/firebase-config.json
