@@ -19,4 +19,6 @@ build/
 .DS_Store
 Thumbs.db
 /serviceAccountKey.json
-/firebase-config.json
+/firebase-config.jsonb
+src/config/firebase-config.json
+
