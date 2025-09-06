@@ -1,59 +1,133 @@
-API para gerenciamento de estoque com Node.js e Firebase Firestore
 
-📌 Funcionalidades
+📌 CRUD API – Node.js + Express + Firebase
 
-CRUD completo para produtos
-Validação automática de dados
-Integração com Firebase
-Estrutura organizada em camadas
+API RESTful simples desenvolvida em Node.js com Express, utilizando o Firebase Firestore como banco de dados.
 
-🛠️ Tecnologias
+🚀 Tecnologias
+
 Node.js
+
 Express
+
 Firebase Firestore
-Jest (para testes)
-⚙️ Configuração
 
-Pré-requisitos
+Dotenv para variáveis de ambiente
 
-Node.js 16+
-Conta Firebase
 
-Instalação
 
-git clone [seu-repo]
-cd projeto-nodejs
+---
+
+📂 Estrutura do Projeto
+
+📦 crud-api-firebase
+├── 📂 src
+│   ├── 📂 routes
+│   │   └── userRoutes.js
+│   ├── 📂 controllers
+│   │   └── userController.js
+│   ├── 📂 config
+│   │   └── firebase.js
+│   ├── server.js
+│   └── app.js
+├── .env
+├── package.json
+└── README.md
+
+
+---
+
+⚙️ Instalação
+
+# Clone o repositório
+git clone https://github.com/seu-usuario/crud-api-firebase.git
+
+# Entre na pasta
+cd crud-api-firebase
+
+# Instale as dependências
 npm install
+
+# Configure o arquivo .env
 cp .env.example .env
-Configurar Firebase
 
-Baixe o arquivo firebase-config.json do console Firebase
-Coloque na pasta src/config/
-Rodar o projeto
-
-Copy code
-npm start          # Produção
-npm run dev        # Desenvolvimento
-npm test           # Testes
-
-🚀 Endpoints
-
-GET    /api/products       - Lista todos os produtos
-POST   /api/products       - Cria novo produto
-GET    /api/products/:id   - Obtém produto por ID
-PUT    /api/products/:id   - Atualiza produto
-DELETE /api/products/:id   - Remove produto
-
-📦 Estrutura do Código
+# Inicie o servidor
+npm run dev
 
 
-src/
-├── controllers/  # Lógica das rotas
-├── routes/       # Definição de endpoints
-├── services/     # Regras de negócio
-├── models/       # Interação com Firestore
-└── middlewares/  # Validações
+---
 
-🛑 Observações de Segurança
-Mantenha firebase-config.json fora do controle de versão
-Proteja os endpoints com autenticação em produção
+🔑 Variáveis de Ambiente (.env)
+
+PORT=3000
+FIREBASE_PROJECT_ID=seu-projeto
+FIREBASE_PRIVATE_KEY="sua-chave-privada"
+FIREBASE_CLIENT_EMAIL=seu-email-firebase@projeto.iam.gserviceaccount.com
+
+> ⚠️ Importante: nunca exponha suas credenciais públicas do Firebase em repositórios abertos.
+
+
+
+
+---
+
+📌 Rotas da API
+
+➕ Criar Usuário
+
+POST /api/users
+
+Body JSON
+
+{
+  "name": "João Silva",
+  "email": "joao@email.com"
+}
+
+
+---
+
+📋 Listar Usuários
+
+GET /api/users
+
+
+---
+
+🔎 Buscar Usuário por ID
+
+GET /api/users/:id
+
+
+---
+
+✏️ Atualizar Usuário
+
+PUT /api/users/:id
+
+Body JSON
+
+{
+  "name": "João Atualizado"
+}
+
+
+---
+
+❌ Deletar Usuário
+
+DELETE /api/users/:id
+
+
+---
+
+📮 Exemplo de Requisição (via cURL)
+
+curl -X POST http://localhost:3000/api/users \
+-H "Content-Type: application/json" \
+-d '{"name":"Maria","email":"maria@email.com"}'
+
+
+---
+
+
+
